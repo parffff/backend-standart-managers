@@ -1,6 +1,8 @@
 import fbAdmin from 'firebase-admin'
 import { Message, MessagingPayload, MulticastMessage } from 'firebase-admin/messaging'
+import { Injectable } from '@nestjs/common'
 
+@Injectable()
 export default class FCM {
   admin: fbAdmin.app.App
   constructor(key: string | fbAdmin.ServiceAccount) {
